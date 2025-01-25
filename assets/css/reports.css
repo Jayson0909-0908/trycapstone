@@ -1,0 +1,88 @@
+
+body {
+    background-color: #f4f6f9;
+}
+
+.report-container {
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Center and limit the width */
+}
+
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.report-header > div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.report-header h4 {
+    margin: 0;
+    flex: 1 0 auto;
+    font-weight: bold;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.summary-table {
+    margin-top: 20px;
+}
+
+.summary-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.summary-table th,
+.summary-table td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px;
+}
+
+.summary-table th {
+    background-color: #f1f3f5;
+    font-weight: bold;
+}
+
+/* Center alignment for the "paper" effect during printing */
+@media print {
+    body {
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+    }
+    body * {
+        visibility: hidden;
+    }
+    .report-container,
+    .report-container * {
+        visibility: visible;
+    }
+    .report-container {
+        margin: 0 auto;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        max-width: 800px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}

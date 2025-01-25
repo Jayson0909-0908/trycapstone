@@ -1,0 +1,322 @@
+.backButton {
+    display: none;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.backButton:hover {
+    background-color: #0056b3;
+}
+
+.categoryList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 5px; /* Space between the cards */
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.categoryItem {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.card-body1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 170px; /* Ensure the cards have a uniform height */
+    width: 200px;
+}
+
+.card-body1 h4 {
+font-size: 20px;
+font-weight: bold;
+color: #333; /* Darker color for readability */
+margin-top: 10px;
+margin-bottom: 0;
+letter-spacing: 0.5px; /* Slight spacing for better look */
+}
+.card-body2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 220px; /* Ensure the cards have a uniform height */
+    width: 200px;
+}
+
+.card-body2 h4 {
+font-size: 18px;
+font-weight: bold;
+color: #333; /* Darker color for readability */
+margin-top: 10px;
+margin-bottom: 0;
+letter-spacing: 0.5px; /* Slight spacing for better look */
+}
+
+.productContainer {
+    padding: 20px;
+}
+
+.productImage {
+    max-height: 100px;
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 10px; /* Space between the product cards */
+    margin-bottom: 20px;
+}
+
+.product-item {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.product-items {
+    background-color: hwb(0 100% 0%);
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+.title-search-container {
+display: flex;
+align-items: center;
+gap: 15px; /* Space between the title and search bar */
+}
+
+.search-container {
+display: flex;
+align-items: center;
+background-color: #ffffff;
+border-radius: 20px;
+padding: 5px 10px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+width: 300px;
+}
+
+#search-bar {
+border: none;
+outline: none;
+width: 100%;
+padding: 4px;
+}
+
+#search-bar-product {
+border: none;
+outline: none;
+width: 100%;
+padding: 4px;
+}
+
+.search-container button {
+background: none;
+border: none;
+cursor: pointer;
+font-size: 16px;
+color: #555;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* One column on very small screens */
+    }
+}
+
+.sidenavfortransaction {
+    position: fixed;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  z-index: 996;
+  transition: all 0.3s;
+  padding: 0px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #aab7cf transparent;
+  box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+  background-color: #fff;
+  }
+
+  .posOrderContainer {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    width: 450px;
+    z-index: 996;
+    transition: all 0.3s;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+}
+
+/* Scrollable area for products */
+.pos_items_container {
+    flex-grow: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #aab7cf transparent;
+    padding: 10px;
+}
+
+/* Checkout button container at the bottom */
+.checkout-container {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px -2px 10px rgba(1, 41, 112, 0.1);
+    text-align: center;
+}
+
+.checkoutTblContent{
+  font-size:16px;
+  color:#652b30;
+  text-align:center;
+}
+
+.checkoutTblContentContainer{
+  padding-top:3px;
+  padding-bottom:3px;
+}
+.checkoutTblContentContainer:nth-child(odd){
+  background: #f4f4f4;
+}
+
+
+/* Total section styling remains unchanged */
+.total-container {
+    padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .subtotal, .discount, .tax, .total {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .item_total--value,
+    .item_total--tax,
+    .item_total--total,
+    .item_total--discount {
+        margin-left: auto;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+.checkoutDialog .modal-dialog {
+    position: fixed;
+    top: 5%; /* Center vertically */
+    left: 20%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the modal */
+    width: 100%; /* Adjust the width of the modal */
+    max-width: 600px; /* Set a maximum width to ensure it looks good */
+    max-height: 90vh; /* Ensure it doesn't overflow vertically */
+}
+
+.checkoutDialog .modal-content {
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh; /* Ensure content doesn't overflow out of view */
+    overflow: hidden; /* Prevent overall overflow */
+}
+
+.checkoutDialog .modal-body {
+    flex: 1;
+    overflow-y: auto; /* Allow scrolling within the body */
+    max-height: calc(90vh - 100px); /* Adjust based on available space, reserving room for footer */
+}
+
+.checkoutDialog .modal-footer {
+    background: #fff;
+    z-index: 10;
+    flex-shrink: 0; /* Prevent shrinking */
+    padding: 10px;
+}
+
+.payment-table, .customer-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+.payment-table td, .customer-details-table td {
+    padding: 8px;
+    vertical-align: middle;
+}
+
+.payment-table td:first-child, .customer-details-table td:first-child {
+    width: 30%;
+    font-weight: bold;
+    text-align: left;
+}
+
+.payment-table input, 
+.customer-details-table input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: right;
+}
+
+#category-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    background-color: #f8f9fa;
+    border-radius: 30px;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+#category-menu li {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+#category-menu li.active {
+    color: #007bff;
+}
+
+#category-menu li:hover {
+    color: #007bff;
+}
+
+#pagetitle.disabled {
+    color: black; /* Change text color to black */
+}
